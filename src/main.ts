@@ -6,10 +6,39 @@ import parseDiff, { Chunk, File } from 'parse-diff';
 import minimatch from 'minimatch';
 
 const GITHUB_TOKEN: string = core.getInput('GITHUB_TOKEN');
+if (GITHUB_TOKEN) {
+  console.log('Successfully retrieved GITHUB_TOKEN');
+} else {
+  console.error('Failed to retrieve GITHUB_TOKEN');
+}
+
 const AZURE_OPENAI_ENDPOINT: string = core.getInput('AZURE_OPENAI_ENDPOINT');
+if (AZURE_OPENAI_ENDPOINT) {
+  console.log('Successfully retrieved AZURE_OPENAI_ENDPOINT');
+} else {
+  console.error('Failed to retrieve AZURE_OPENAI_ENDPOINT');
+}
+
 const AZURE_OPENAI_API_KEY: string = core.getInput('AZURE_OPENAI_API_KEY');
+if (AZURE_OPENAI_API_KEY) {
+  console.log('Successfully retrieved AZURE_OPENAI_API_KEY');
+} else {
+  console.error('Failed to retrieve AZURE_OPENAI_API_KEY');
+}
+
 const AZURE_OPENAI_API_VERSION: string = core.getInput('AZURE_OPENAI_API_VERSION');
+if (AZURE_OPENAI_API_VERSION) {
+  console.log('Successfully retrieved AZURE_OPENAI_API_VERSION');
+} else {
+  console.error('Failed to retrieve AZURE_OPENAI_API_VERSION');
+}
+
 const AZURE_OPENAI_DEPLOYMENT: string = core.getInput('AZURE_OPENAI_DEPLOYMENT');
+if (AZURE_OPENAI_DEPLOYMENT) {
+  console.log('Successfully retrieved AZURE_OPENAI_DEPLOYMENT');
+} else {
+  console.error('Failed to retrieve AZURE_OPENAI_DEPLOYMENT');
+}
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
